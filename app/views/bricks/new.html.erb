@@ -1,4 +1,21 @@
-<%= form_for @brick do |f| %>
-  <%= f.text_field :email %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="offset3 span6 form row">
+    <%= form_for @brick, class: 'form-horizontal' do |f| %>
+      <%= content_tag :div, class: 'control-group' do %>
+        <%= f.label :name, class: 'control-label' %><%= f.text_field :name, class: 'controls span2' %>
+      <% end %>
+      <%= content_tag :div, class: 'control-group' do %>
+        <%= f.label :message, class: 'control-label' %><%= f.text_field :message, class: 'controls, span5' %>
+      <% end %>
+
+      <%= content_tag :div, class: 'control-group' do %>
+        <%= f.label :colour, class: 'control-label' %><%= f.select :colour, %w(red green pink orange yellow blue), class: 'controls' %>
+      <% end %>
+
+      <%= content_tag :div, class: 'controls' do %>
+        <%= f.submit 'Buy your brick', class: 'btn btn-primary' %>
+        <%= link_to 'Cancel', bricks_path, class: 'btn' %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

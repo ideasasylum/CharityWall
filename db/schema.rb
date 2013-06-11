@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130520214713) do
+ActiveRecord::Schema.define(:version => 20130611154430) do
 
   create_table "bricks", :force => true do |t|
     t.integer  "amount"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(:version => 20130520214713) do
     t.string   "colour"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.string   "message"
   end
 
 end

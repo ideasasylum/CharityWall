@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
+//= require jquery.ui.effect.all
+//= require underscore
+//= require bricks
 //= require_tree .
