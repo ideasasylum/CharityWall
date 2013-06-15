@@ -12,6 +12,7 @@ class BricksController < ApplicationController
         Brick.new(name: 'Blue', message: "I'm a blue brick, aren't I pretty?", colour: 'blue')
       ]
    4.times { @bricks += dummy_bricks }
+   @bricks.shuffle!
   end
 
   def new
