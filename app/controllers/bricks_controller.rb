@@ -21,6 +21,7 @@ class BricksController < ApplicationController
 
   def create
     @brick = Brick.create params[:brick]
+    redirect_to bricks_path
   end
 
   def show
