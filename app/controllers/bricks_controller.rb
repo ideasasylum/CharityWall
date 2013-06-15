@@ -20,7 +20,6 @@ class BricksController < ApplicationController
 
   def create
     @brick = Brick.create params[:brick]
-
   end
 
   def show

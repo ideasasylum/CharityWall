@@ -11,16 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611154430) do
+ActiveRecord::Schema.define(:version => 20130611165725) do
 
   create_table "bricks", :force => true do |t|
     t.integer  "amount"
     t.string   "email"
     t.string   "colour"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.string   "name"
     t.string   "message"
+    t.text     "paypal_response"
+    t.datetime "paid_on"
+    t.boolean  "paid"
   end
+
+  add_index "bricks", ["paid"], :name => "index_bricks_on_paid"
 
 end
